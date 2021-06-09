@@ -123,7 +123,6 @@ const editTask = function (index) {
 const updateTask = function (index) {
   //* update the task object
   taskObj[String(index)] = taskInput.value;
-  console.log(taskObj);
 
   //* update task in the localstorage
   localStorage.setItem("task", JSON.stringify(taskObj));
@@ -142,7 +141,6 @@ const updateTask = function (index) {
 const addTask = function (hasIndex = false, index = 0) {
   //* check if task value is not empty
   if (taskInput?.value && !hasIndex) {
-    console.log(listIndex);
     //* add th?e task to the localstorage
     addTaskToLocalStorage(listIndex, "task", taskInput.value);
 
